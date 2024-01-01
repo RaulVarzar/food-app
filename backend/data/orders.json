@@ -1,0 +1,99 @@
+[
+  {
+    "items": [
+      {
+        "id": "m5",
+        "name": "Veggie Burger",
+        "price": "9.99",
+        "category": "burgers",
+        "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+        "image": "images/veggie-burger.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m4",
+        "name": "Spaghetti Carbonara",
+        "price": "10.99",
+        "category": "pasta",
+        "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+        "image": "images/spaghetti-carbonara.jpg",
+        "quantity": 3
+      },
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": "8.99",
+        "category": "pasta",
+        "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+        "image": "images/mac-and-cheese.jpg",
+        "quantity": 2
+      }
+    ],
+    "customer": {
+      "name": "Sorina Archiudean",
+      "email": "sorinaa119@yahoo.com",
+      "street": "Strada Unirii 3",
+      "city": "Cluj-Napoca",
+      "postal-code": "5493834",
+      "phone": "0748263403",
+      "payment": "online-card"
+    },
+    "totalPrice": "60.94",
+    "day": "Mon Jan 01 2024",
+    "time": "14:29",
+    "id": 2
+  },
+  {
+    "items": [
+      {
+        "id": "m5",
+        "name": "Veggie Burger",
+        "price": "9.99",
+        "category": "burgers",
+        "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+        "image": "images/veggie-burger.jpg",
+        "quantity": 3
+      },
+      {
+        "id": "m20",
+        "name": "Falafel Wrap",
+        "price": "8.99",
+        "category": "burgers",
+        "description": "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
+        "image": "images/falafel-wrap.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m12",
+        "name": "Pancake Stack",
+        "price": "8.99",
+        "category": "dessert",
+        "description": "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
+        "image": "images/pancake-stack.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m15",
+        "name": "Chocolate Brownie",
+        "price": "5.99",
+        "category": "dessert",
+        "description": "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
+        "image": "images/chocolate-brownie.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Raul Bogdan Varzar",
+      "email": "raul_varzar@yahoo.com",
+      "street": "Strada Amsterdam 13",
+      "city": "Târgu Mureș",
+      "postal-code": "540347",
+      "phone": "+40744840417",
+      "payment": "card"
+    },
+    "totalPrice": "53.94",
+    "day": "Mon Jan 01 2024",
+    "time": "14:28",
+    "id": 1
+  }
+]
