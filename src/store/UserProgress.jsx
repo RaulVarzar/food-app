@@ -1,24 +1,68 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
 // User progress can be:
 // [shopping, checkout, finished]
 
 const UserProgress = createContext({
-    progress: "",
-    updateProgress: () => {},
-})
+  progress: '',
+  updateProgress: () => {},
+  productsView: '',
+  updateCheckoutDetails: () => {},
+  checkoutDetails: {
+    name: '',
+    email: '',
+    street: '',
+    city: '',
+    postcode: '',
+    phone: '',
+    payment: '',
+    comment: '',
+  },
+});
 
-export function UserProgressProvider({children}) {
+export function UserProgressProvider({ children }) {
+  const [productsView, setProductsView] = useState('grid');
+  const [progress, setProgress] = useState('shopping');
+  const [checkoutDetails, setCheckoutDetails] = useState({
+    name: '',
+    email: '',
+    street: '',
+    city: '',
+    postcode: '',
+    phone: '',
+    payment: 'cash',
+    comment: '',
+  });
 
-    const [progress, setProgress] = useState("shopping")
+  function updateProgress(nextStep) {
+    setProgress(nextStep);
+  }
 
-    function updateProgress(nextStep){
-        setProgress(nextStep)
-    }
+  function changeView(view) {
+    setProductsView(view);
+  }
 
-    
-    return <UserProgress.Provider value={{ progress, updateProgress }} >{children}</UserProgress.Provider>
+  function updateCheckoutDetails(field, newValue) {
+    setCheckoutDetails((prevState) => ({
+      ...prevState,
+      [field]: newValue,
+    }));
+  }
+
+  return (
+    <UserProgress.Provider
+      value={{
+        progress,
+        updateProgress,
+        updateCheckoutDetails,
+        checkoutDetails,
+        productsView,
+        changeView,
+      }}
+    >
+      {children}
+    </UserProgress.Provider>
+  );
 }
 
-export default UserProgress
-
+export default UserProgress;

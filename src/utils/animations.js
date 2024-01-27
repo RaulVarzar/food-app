@@ -16,7 +16,7 @@ export  function JumpIn({ children, duration, delay, ...props }){
     )
 }
 
-export  function FadeIn({ children, duration, delay, ...props }){
+export function FadeIn({ children, duration, delay, ...props }){
     return(
         <motion.div
             initial={{ opacity:0 }}
@@ -30,11 +30,26 @@ export  function FadeIn({ children, duration, delay, ...props }){
     )
 }
 
-export  function FromTop({ children, duration, delay, ...props }){
+export function FromTop({ children, duration, delay, ...props }){
     return(
         <motion.div
             initial={{ y:"-100%", opacity:0}}
             animate={{  y:0 , opacity:1}}
+            exit={{y:"-100%", opacity:0}}
+            transition={{ duration: duration, delay:delay }}
+            {...props}
+        >
+            {children}
+        </motion.div>
+    )
+}
+
+export function FromBottom({ children, duration, delay, ...props }){
+    return(
+        <motion.div
+            initial={{ y:"100%", opacity:0}}
+            animate={{  y:0 , opacity:1}}
+            exit={{y:"100%", opacity:0}}
             transition={{ duration: duration, delay:delay }}
             {...props}
         >

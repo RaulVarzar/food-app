@@ -2,36 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-.modal-backdrop{
-  background: rgba(0,0,0,0.4);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto+Mono:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap');
+
+body,
+html {
+  font-family: 'Outfit', sans-serif;
+}
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #555;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #555;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
 }
 
 .input-with-placeholder {
-    /* width: 250px; */
-    position: relative;
-  }
-  .input-with-placeholder label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    transition: 300ms all;
-    @apply text-neutral-content;
-  }
-  .input-with-placeholder input {
-    width: 100%;
-    height: 40px;
-    padding: 0 15px;
-  }
-  .input-with-placeholder input:valid + label, .input-with-placeholder input:focus + label {
-    height: 40%;
-    opacity: 0.4;
-    padding-left: 0;
-    transform: translateY(-70%);
-    font-size: 12px;
-  }
+  /* width: 250px; */
+  position: relative;
+}
+.input-with-placeholder label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 300ms all;
+  @apply text-neutral-content;
+}
+.input-with-placeholder input {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+}
+.input-with-placeholder input:valid + label,
+.input-with-placeholder input:focus + label {
+  height: 40%;
+  opacity: 0.4;
+  padding-left: 0;
+  transform: translateY(-70%);
+  font-size: 12px;
+}
